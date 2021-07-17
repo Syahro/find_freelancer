@@ -1,3 +1,4 @@
+import 'package:find_freelancer/pages/detail_page.dart';
 import 'package:find_freelancer/theme.dart';
 import 'package:flutter/material.dart';
 
@@ -22,7 +23,11 @@ class TopFreelancerCard extends StatelessWidget {
     return Padding(
       padding: EdgeInsets.only(right: defaultMargin),
       child: InkWell(
-        onTap: () {},
+        onTap: () {
+          Navigator.push(context, MaterialPageRoute(builder: (context) {
+            return DetailPage();
+          }));
+        },
         child: Row(
           children: [
             Padding(
